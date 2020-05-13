@@ -1,0 +1,67 @@
+.orderdiv{
+    h3{
+        line-height: .5rem;
+        font-size: .3rem;
+        color: #ff4891;
+        border-bottom:1px solid #f3f3f3;
+        span{
+            float: right;
+            font-size: .24rem;
+            color: #999;
+        }
+    }
+    .imgdiv{
+        height: 1.4rem;
+        display: flex;
+        overflow: hidden;
+        align-items: center;
+        img{
+            width: 1.2rem;
+            height: 1.2rem;
+            margin-right: .1rem;
+        }
+    }
+    p{
+        line-height: .8rem;
+        text-align: end;
+        border-bottom:1px solid #f3f3f3;
+        span:first-child{
+            color: #999;
+            font-size:.24rem;
+        }
+        span:nth-child(2){
+            margin-left:.2rem;
+            font-size:.24rem;
+            color: #888;
+            span{
+                font-size:.3rem;
+                color: #333;
+            }
+        }
+    }
+    .detaildiv{
+        text-align: end;
+        span{
+            display: inline-block;
+            padding: .1rem;
+            color: #777;
+            font-size: .26rem;
+            border:1px solid #888;
+            margin: .14rem 0;
+        }
+    }
+}
+
+
+// <div style={{ backgroundColor: '#fff' }}>
+// <h3>2小时达</h3>
+// <div className="imgdiv">
+//     {item.checkgoods.map((g,i)=>(
+//         <img src={g.image} alt="" />
+//     ))}
+// </div>
+// <p>
+//     <span>共{item.carNum}件</span>
+//     <span>实付款<span>{(item.total/100).toFixed(2)}</span></span>
+// </p>
+// </div>

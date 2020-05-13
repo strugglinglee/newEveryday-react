@@ -1,28 +1,38 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {BrowserRouter as Router,Route,Switch,Redirect} from "react-router-dom"
+import { Index } from './Page/Index';
+import { Login } from './Page/Login/Login';
+import { Register } from './Page/Login/Register';
+import { Detail } from './Page/Detail/detail';
+import { Order } from './Page/Order';
+import { Address } from './Page/Address';
+import { Myorder } from './Page/Myorder';
+import { Search } from './Page/search';
+import { Oresult } from './Page/Oresult';
 
-class App extends Component {
+export default class App extends Component {
+  //render模板  jsx---js和html混写
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <Router>
+        <div>
+          <Switch>
+            <Route path="/register" component={Register} />
+            <Route path="/login" component={Login}  />
+            <Route path="/oresult" component={Oresult} />
+            <Route path="/order" component={Order}  />
+            <Route path="/app/:tab?" component={Index} />
+            <Route path="/myorder" component={Myorder} />
+            <Route path="/search" component={Search} />
+            <Route path="/address" component={Address} />
+            <Route path="/detail/:goodsid" component={Detail} />
+            <Route  render={()=>{
+                return <Redirect to="/app/home" />
+            }}
+            />
+          </Switch>
+        </div>
+      </Router>
     );
   }
 }
-
-export default App;

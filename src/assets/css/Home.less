@@ -1,0 +1,52 @@
+.goodsdiv{
+    width: 100%;
+    .goodsdiv1{
+        width: 100%;
+    }
+    h3{
+        @h:20px;
+        font-size: 18px;
+        margin:auto;
+        text-align: center;
+        margin-top:10px;
+        line-height: @h;
+        color:#333;
+        height:2*@h;
+        overflow-y: hidden;
+    }
+}
+.goods-list{
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    .goods-content{
+        @w:100%;
+        width: @w/3;
+        box-sizing: border-box;
+        padding:10px;
+        height: 200px;
+        img{
+            width: 100%;
+            height: 100px;
+        }
+        a{
+            text-decoration: none;
+            color: #333;
+        }
+        .price{
+            @h:20px;
+            color:#999;
+            font-size:12px;
+            line-height: @h;
+            span{
+                color:#E20;
+                font-size:14px;
+            }
+        }
+        .title{
+            line-height: 20px;
+            font-size: 14px;
+        }
+    }
+}
